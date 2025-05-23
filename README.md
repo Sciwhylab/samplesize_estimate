@@ -46,7 +46,7 @@ This sample size is reported as the convergence sample size.
 
 If you find that the Learning curve is not reaching the saturation point for your dataset, it indicates that more samples may be required for your data. You can collect some more data samples and repeat the experiment to check for convergence.
 
-## Output of the Experiment:
+### Output of Step 3:
 
 The following measures are reported at the end of the experiment:
 1. Total Sample Size
@@ -59,3 +59,11 @@ The following measures are reported at the end of the experiment:
 The learning curve extrapolation can help us to determine the model performance at larger data sizes using results from smaller sample sizes. In this approach, we fit a learning curve to the AUC scores obtained at smaller sample sizes and attempt to determine the minimum sample size which is able to approximate the model behavior for larger datasets.
 
 The learning curve construction uses the current samples of data collected for the experiment at suggested sampling intervals in Step 3. Further, this learning curve can be extrapolated to predict the model performance if more data was present. Conversely, it can also help us to see approximately how much more data needs to collected to reach a given AUC performance.
+
+### Output of Step 4:
+
+The plot with actual sample size vs performance along with the extrapolated Learning Curve is generated. 
+It also marks the predicted convergence sample size at a 0.5% threshold of performance change between subseqent sample sizes.
+Here is a sample extrapolated Learning curve for OpenML dataset ID: 1120 (MagicTelescope)
+
+![LC](Figure6a.png)
