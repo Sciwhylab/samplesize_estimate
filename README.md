@@ -60,10 +60,20 @@ The learning curve extrapolation can help us to determine the model performance 
 
 The learning curve construction uses the current samples of data collected for the experiment at suggested sampling intervals in Step 3. Further, this learning curve can be extrapolated to predict the model performance if more data was present. Conversely, it can also help us to see approximately how much more data needs to collected to reach a given AUC performance.
 
+The learning curves can either be a Rapid Convergence Learning Curve or a Slow Growth Learning Curve. Examples of both are shown below.
+
 ### Output of Step 4:
 
 The plot with actual sample size vs performance along with the extrapolated Learning Curve is generated. 
 It also marks the predicted convergence sample size at a 0.5% threshold of performance change between subseqent sample sizes.
-Here is a sample extrapolated Learning curve for OpenML dataset ID: 1120 (MagicTelescope)
+Here are 2 examples of the extrapolated Learning curve:
+
+1. **Rapid Convergence Learning Curve:** In this case, the performance of the machine learning model improves quickly and then stabilizes.
+OpenML dataset ID: 1019 (pendigits)
+
+![LC](Figure5a.png)
+   
+2. **Slow Growth Learning Curve:** Here, slow and gradual convergence is noticed.
+OpenML dataset ID: 1120 (MagicTelescope)
 
 ![LC](Figure6a.png)
