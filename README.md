@@ -53,3 +53,9 @@ The following measures are reported at the end of the experiment:
 2. Convergence Sample Size
 3. Maximum AUC
 4. Convergence AUC
+
+**Step 4: Extrapolate the Learning curve to predict the sample size required to achieve a higher performance:**
+
+The learning curve extrapolation can help us to determine the model performance at larger data sizes using results from smaller sample sizes. In this approach, we fit a learning curve to the AUC scores obtained at smaller sample sizes and attempt to determine the minimum sample size which is able to approximate the model behavior for larger datasets.
+
+The learning curve construction uses the current samples of data collected for the experiment at suggested sampling intervals in Step 3. Further, this learning curve can be extrapolated to predict the model performance if more data was present. Conversely, it can also help us to see approximately how much more data needs to collected to reach a given AUC performance.
